@@ -26,3 +26,6 @@ demo-ui-config.js
 **/.DS_Store
 **/.vscode
 **/.idea
+
+# deploy environment setting
+.env

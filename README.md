@@ -79,9 +79,11 @@ chmod +x run-unit-tests.sh
 ## Build
 
 ```bash
-cd $MAIN_DIRECTORY/deployment
-chmod +x build-s3-dist.sh
+chmod +x ./deployment/build-s3-dist.sh
+export $(grep -v '^#' .env | xargs)
+cd deployment
 ./build-s3-dist.sh $BUCKET_PREFIX $SOLUTION_NAME $VERSION
+cd ..
 ```
 
 ## Deploy
